@@ -1,0 +1,105 @@
+:root {
+    --color-primary: #264653;
+    --color-secondary: #2a9d8f;
+    --color-bg-primary: #e9c46a;
+    --color-warn: #f4a261;
+    --color-error: #e76f51;
+}
+
+/* Element Rules Start */
+body {
+    background: var(--color-bg-primary);
+    color: var(--color-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-secondary);
+}
+
+/* Element Rules End */
+
+/* Phone screens only */
+@media screen and (max-width: 480px) {
+    h2 {
+        font-size: 8vw;
+    }
+
+    /* Navbar Rules Start */
+    .navbar {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .navbar {
+        background: var(--color-primary);
+    }
+
+    .logo {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .logo img {
+        border-radius: 10vw;
+        width: 20vw;
+        opacity: .7;
+    }
+
+    .navbar nav {
+        flex-basis: 100%;
+    }
+
+    .navbar nav ul {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    /* Navbar Rules End*/
+}
+
+/* Tablet screens only */
+@media screen and (min-width: 481px) {
+    h2 {
+        font-size: 8vw;
+    }
+
+    /* Navbar Rules Start */
+    .navbar {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .navbar {
+        background: var(--color-primary);
+    }
+
+    .logo {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .logo img {
+        border-radius: 10vw;
+        width: 20vw;
+        opacity: .7;
+    }
+
+    .navbar nav {
+        flex-basis: 100%;
+    }
+
+    .navbar nav ul {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    /* Navbar Rules End*/
+}
+
+/* Laptop screens only */
+@media screen and (min-width: 900px) and (max-width: 1200px) {}
+/* All other screen sizes */
