@@ -1,0 +1,26 @@
+@media (max-width: 599px) {
+    .navbar {
+        --padding: 0 0 20px 0;
+        --box-shadow: 11px -9px 20px 19px rgb(0 0 0 / 70%);
+
+
+        --brand-img-width: 80px;
+        --brand-img-margin: 0 0 0 10px;
+        --brand-img-border-radius: 10vw;
+        --brand-font-size: 10vw;
+        --brand-margin: 20px 0 40px 0;
+
+
+        --button-padding: 10px;
+        --button-font-size: 19px;
+        --button-box-shadow: -1px -2px 20px -4px rgb(0 0 0 / 70%);
+    }
+
+    .navbar-brand div {
+        align-self: center;
+    }
+
+    .navbar nav {
+        flex-basis: 100%;
+    }
+}
