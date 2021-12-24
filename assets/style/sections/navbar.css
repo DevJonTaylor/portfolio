@@ -23,6 +23,10 @@
     margin: var(--brand-img-margin);
 }
 
+.navbar nav {
+    flex-basis: var(--nav-flex-basis);
+}
+
 .navbar nav ul {
     display: flex;
     justify-content: space-around;
