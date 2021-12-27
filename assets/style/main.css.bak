@@ -1,0 +1,8 @@
+@import "./reset.css"; /* Resets elements for different browsers. */
+@import "./variables.css"; /* Variables for fast and easy finds. */
+@import "./utilities.css";
+@import "./sections/navbar.css";
+@import "./phones.css";
+@import "./tablets.css";
+@import "./laptops.css";
+@import "./desktops.css";

@@ -1,0 +1,39 @@
+$screen-multiplier: (
+  xs: .75,
+  sm: .875,
+  md: 1,
+  lg: 1.25
+) !default;
+
+/// @var {Map} Quickly manage breakpoint values.
+$breakpoints: (
+        x-small: (min-width: 0px),
+        small: (min-width: 767px),
+        medium: (min-width: 992px),
+        large: (min-width: 1200px)
+) !default;
+
+/// Colors
+:root {
+  --color-palette-one: #cacacb;
+  --color-palette-two: #3f3f40;
+  --color-palette-three: #204b72;
+  --color-palette-four: #986340;
+  --color-palette-five: #000409;
+}
+$color-palette-scheme: (
+        1: var(--color-palette-one),
+        2: var(--color-palette-two),
+        3: var(--color-palette-three),
+        4: var(--color-palette-four),
+        5: var(--color-palette-five)
+) !default;
+
+/// Typography
+$font-size-base: 1rem;
+$font-sizes: (
+        xs: $font-size-base * map-get($screen-multiplier, xs),
+        sm: $font-size-base * map-get($screen-multiplier, sm),
+        md: $font-size-base * map-get($screen-multiplier, md),
+        lg: $font-size-base * map-get($screen-multiplier, lg),
+) !default;

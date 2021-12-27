@@ -1,0 +1,50 @@
+@use './variables' as *;
+
+@function get-font-size($size) {
+  $sizes: $font-sizes; /// Shorthand
+  @if map-has-key($sizes, $size) {
+    @return map-get($sizes, $size)
+  }
+
+  @else {
+    @return map-get($sizes, 'md');
+  }
+}
+
+@function get-color($color) {
+  $colors: $color-palette-scheme;
+  @if map-has-key($colors, $color) {
+    @return map-get($colors, $color)
+  }
+
+  @else {
+    @warn "The color requested was unable to be located."
+  }
+}
+
+@function get-rem($amount, $screen) {
+  $screens: $screen-multiplier;
+  $vars: $screens, $screen;
+  @if map-has-key($screens, $screen) {
+    @return (map-get($screens, $screen) * $amount)+rem;
+  }
+
+  @return $amount+rem;
+}
+
+@function get-t_r_b_l($t, $r, $b, $l, $screen) {
+  @if ($t != 0) {
+    $t: get-rem($t, $screen);
+  }
+  @if ($r != 0) {
+    $r: get-rem($r, $screen);
+  }
+  @if ($b != 0) {
+    $b: get-rem($b, $screen);
+  }
+  @if ($l != 0) {
+    $l: get-rem($l, $screen);
+  }
+
+  @return $t $r $b $l;
+}

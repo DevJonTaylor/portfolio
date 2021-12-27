@@ -1,0 +1,58 @@
+@use "../variables";
+
+/**
+ * @author Jon Taylor
+ * @define A mixin to quickly add a breakpoint section.
+ * @param {String} $breakpoint - key to the breakpoints map.
+ * @requires {Map} $breakpoints
+ * @example ```@include responsive(small) {
+   .hello-world {
+     flex-basis: 60%;
+   }
+ }
+
+ /// should return
+ @media (min-width: 767px) {
+   .hello-world {
+     flex-basis: 60%
+   }
+ }```
+ */
+@mixin _resp_($breakpoint) {
+  $breakpoints: variables.$breakpoints;
+
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "The breakpoint name `#{$breakpoint}` requested was not located."
+  }
+}
+
+@mixin x-small {
+  @include _resp_("x-small") {
+    @content;
+  }
+}
+
+@mixin small {
+  @include _resp_(small) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @include _resp_(medium) {
+    @content;
+  }
+}
+
+@mixin large {
+  @include _resp_(large) {
+    @content;
+  }
+}
+
