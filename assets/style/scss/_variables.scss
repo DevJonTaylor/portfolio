@@ -20,6 +20,9 @@ $breakpoints: (
   --color-palette-three: #1EA0EB;
   --color-palette-four: #114CD4;
   --color-palette-five: #1A14F7;
+
+  --text-color-light: #f5eaea;
+  --text-color-dark: #1f1f1f;
 }
 $color-palette-scheme: (
         1: var(--color-palette-one),
@@ -28,6 +31,9 @@ $color-palette-scheme: (
         4: var(--color-palette-four),
         5: var(--color-palette-five)
 ) !default;
+
+$text-color-dark: var(--text-color-dark);
+$text-color-light: var(--text-color-light);
 
 /// Typography
 $font-size-base: 1rem;

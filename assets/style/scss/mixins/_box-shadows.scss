@@ -1,0 +1,13 @@
+@mixin box-shadow($offset-x, $offset-y, $blur, $spread, $color) {
+  -webkit-box-shadow: $offset-x $offset-y $blur $spread $color;
+  -o-box-shadow: $offset-x $offset-y $blur $spread $color;
+  -moz-box-shadow: $offset-x $offset-y $blur $spread $color;
+  box-shadow: $offset-x $offset-y $blur $spread $color;
+}
+
+@mixin inset-box-shadow($offset-x, $offset-y, $blur, $spread, $color) {
+  -webkit-box-shadow: inset $offset-x $offset-y $blur $spread $color;
+  -o-box-shadow: inset $offset-x $offset-y $blur $spread $color;
+  -moz-box-shadow: inset $offset-x $offset-y $blur $spread $color;
+  box-shadow: inset $offset-x $offset-y $blur $spread $color;
+}

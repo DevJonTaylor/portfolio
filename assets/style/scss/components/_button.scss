@@ -1,0 +1,21 @@
+@use "../functions" as *;
+@use "../mixins" as *;
+@use "../variables" as *;
+
+.button {
+  background-color: get-color(3);
+  color: $text-color-light;
+  text-shadow: -2px 1px 6px $text-color-dark;
+  text-decoration: none;
+  border-radius: 10%;
+  transition: all 150ms ease-in-out;
+  font-size: get-font-size(xs);
+  padding: get-rem(.75, xs);
+}
+
+.button:hover {
+  background-color: get-color(1);
+  color: $text-color-dark;
+  text-shadow: unset;
+  @include box-shadow(-1px, 2px, 20px, -4px, rgba(0,0,0,.5));
+}

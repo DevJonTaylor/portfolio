@@ -53,6 +53,8 @@ table {
   --color-palette-three: #1EA0EB;
   --color-palette-four: #114CD4;
   --color-palette-five: #1A14F7;
+  --text-color-light: #f5eaea;
+  --text-color-dark: #1f1f1f;
 }
 
 /**
@@ -98,13 +100,13 @@ table {
 .navbar .nav .bar {
   display: flex;
   justify-content: space-evenly;
-}
-.navbar .nav .bar li a {
-  background: var(--color-palette-two);
-  box-shadow: -1px -2px 20px -4px rgba(0, 0, 0, 0.35);
-  color: #1f1f1f;
-  text-decoration: none;
-  border-radius: 0.25rem;
+  /*li a {
+    background: get-color(2);
+    box-shadow: -1px -2px 20px -4px rgba(0,0,0,.35);
+    color: #1f1f1f;
+    text-decoration: none;
+    border-radius: .25rem;
+  }*/
 }
 @media (min-width: 0px) {
   .navbar {
@@ -200,6 +202,27 @@ table {
   .navbar .nav .bar li a {
     padding: 0.9375rem;
   }
+}
+
+.button {
+  background-color: var(--color-palette-three);
+  color: var(--text-color-light);
+  text-shadow: -2px 1px 6px var(--text-color-dark);
+  text-decoration: none;
+  border-radius: 10%;
+  transition: all 150ms ease-in-out;
+  font-size: 0.75rem;
+  padding: 0.5625rem;
+}
+
+.button:hover {
+  background-color: var(--color-palette-one);
+  color: var(--text-color-dark);
+  text-shadow: unset;
+  -webkit-box-shadow: -1px 2px 20px -4px rgba(0, 0, 0, 0.5);
+  -o-box-shadow: -1px 2px 20px -4px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: -1px 2px 20px -4px rgba(0, 0, 0, 0.5);
+  box-shadow: -1px 2px 20px -4px rgba(0, 0, 0, 0.5);
 }
 
 /*# sourceMappingURL=main.css.map */
